@@ -24,7 +24,7 @@ const Contact = () => {
    <section className="contact section" id="contact" ref={ref}>
      <span className="section__subtitle2">What's Next?</span>
      <h2 className="section__title">Get in touch</h2>
-     <span className="section__subtitle">Have a job, proposal, project or want to work together on something?</span>
+     <span className="section__subtitle">Have a job, proposal or want to work together on something? <br /> I'll make sure to get back to you.</span>
 
      <div className="contact__container container grid">
         <div className="contact content">
@@ -37,7 +37,7 @@ const Contact = () => {
                     <h3 className="contact__card-title">Email</h3>
                     <span className="contact__card-data">tonyleo2019@outlook.com</span>
 
-                    <a href="mailto:tonyleo2019@outlook.com" target='_blank' 
+                    <a href="mailto:{tonyleo2019@outlook.com}?subject={Proposal}&body={Hello Tony, this is ...}" target='_blank' 
                        className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                 </div>
 
@@ -51,12 +51,12 @@ const Contact = () => {
                 </div>
 
                 <div className="contact__card">
-                    <i className="bx bxl-whatsapp contact__card-icon"></i>
+                    <i className="bx bx-phone-call contact__card-icon"></i>
 
-                    <h3 className="contact__card-title">Whatsapp</h3>
+                    <h3 className="contact__card-title">Phone</h3>
                     <span className="contact__card-data">+2347062826563</span>
 
-                    <a href="https://wa.me/message/NLFY2LONBZEVJ1" target='_blank' className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    <a href="tel:{+2347062826563}" target='_blank' className="contact__button">Call me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                 </div>
 
             </div>

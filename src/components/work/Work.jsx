@@ -5,15 +5,9 @@ import { motion } from 'framer-motion';
 
 const Work = () => {
   return (
-    <motion.section className="work section" id='portfolio'
-    initial={{width: 0}}
-      animate={{width: '100%'}}
-      exit={{x: window.innerWidth, transition: { duration: 0.3 }}}>
-        <h2 className="section__title">Portfolio</h2>
-        <span className="section__subtitle">
-        Recent Works
-        </span>
-
+    <motion.section className="work section" id='portfolio'>
+        <h2 className="section__title"> Some things I've Built</h2>
+        
         <Works />
 
     </motion.section>

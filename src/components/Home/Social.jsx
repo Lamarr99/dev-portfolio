@@ -37,13 +37,13 @@ export const scrollToRight = {
 const Social = () => {
   return (
   <motion.div className="home__social" variants={links}
-  initial='hidden'
+    initial='hidden'
     animate='show'
     exit='exit'
  >
-    <motion.a  variants={scrollToRight} whileHover={{translateY : -3}} href="https://github.com/Lamarr99" className="home__social-icon" target='_blank' rel='noreferrer' ><i className="uil uil-github"></i></motion.a>
-    <motion.a variants={scrollToRight} whileHover={{translateY : -3}} href="https://www.linkedin.com/in/tony-osijo/" className="home__social-icon" target='_blank' rel='noreferrer' ><i className="uil uil-linkedin"></i></motion.a>
-    <motion.a variants={scrollToRight} whileHover={{translateY : -3}} href="https://wa.me/message/NLFY2LONBZEVJ1" className="home__social-icon" target='_blank' rel='noreferrer' ><i className="uil uil-whatsapp"></i></motion.a>
+    <motion.a  variants={scrollToRight} href="https://github.com/Lamarr99" className="home__social-icon" target='_blank' rel='noreferrer' ><i className="uil uil-github"></i></motion.a>
+    <motion.a variants={scrollToRight} href="https://www.linkedin.com/in/tony-osijo/" className="home__social-icon" target='_blank' rel='noreferrer' ><i className="uil uil-linkedin"></i></motion.a>
+    <motion.a variants={scrollToRight} href="https://wa.me/message/NLFY2LONBZEVJ1" className="home__social-icon" target='_blank' rel='noreferrer' ><i className="uil uil-whatsapp"></i></motion.a>
     
     </motion.div>
   )

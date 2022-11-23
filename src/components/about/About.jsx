@@ -48,18 +48,21 @@ const About = () => {
     className='about section' id='about' >
       <motion.div variants={loadOnScroll}>
         <motion.h2  className='section__title'>About Me</motion.h2>
-        <span className="section__subtitle">My introduction</span>
       </motion.div>
         <div className="about__container container grid">
             <motion.img variants={loadOnScroll} src={AboutImg} alt="" className="about__img" />
+           
 
             <motion.div variants={scrollToLeft} className="about__data">
                 <Info  />
 
-                <motion.p variants={loadOnScroll} className="about__description">Frontend developer, 
-                I create web pages with UI / UX user interface, I have 2 
-                years of experience and many clients are happy with the 
-                projects carried out.
+                <motion.p variants={loadOnScroll} className="about__description">Hello! I'm Tony and i 
+                love building things that live on the internet. 
+                My interest in web development started back in 2019 
+                when i tried making a blog site for a friend with wordpress -
+                 totally enjoyed the process and now I create pixel-perfect web pages with
+                  UI / UX user interface, I have more than a year's experience and
+                   most clients have been satisfied with my work so far.
                 </motion.p>
 
                 <motion.a variants={scrollToLeft} download='' href={CV} className="button button--flex">

@@ -6,13 +6,9 @@ import { motion} from 'framer-motion'
 
 const Skills = () => {
   return (
-   <motion.section className="skills section" id="skills"
-  //  initial={{width: 0}}
-      // animate={{y: 100}}
-      // exit={{x: window.innerWidth, transition: { duration: 0.3 }}}
-      >
+   <motion.section className="skills section" id="skills">
      <h2 className='section__title'>Skills</h2>
-        <span className="section__subtitle">My technical level</span>
+      
 
         <div className="skills__container container grid">
             <Technologies />

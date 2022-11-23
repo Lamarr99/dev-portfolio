@@ -36,17 +36,26 @@
     font-weight: var(--font-normal);
     transition: .3s;
 }
-/*  */
 
-/*  */
+.nav__link::after {
+    content:  '';
+    display: block;
+    width: 0;
+    height: .1rem;
+    background-color: var(--hover-color);
+    transition:  width .3s;
+}
+.nav__link:hover::after {
+    width: 75%;
+}
+
 .nav__close,
 .nav__toggle ,
 .nav__icon {
     display: none;
     }
 
-.active-link,
-.nav__link:hover {
+.active-link {
     color: var(--hover-color);
 }
 
