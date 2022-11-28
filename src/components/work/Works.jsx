@@ -1,9 +1,11 @@
 import React,{useState, useEffect} from 'react'
+import { loadOnScroll } from '../about/About';
 import { projectsData, projectsNav } from './Data'
 import WorkItems from './WorkItems'
+import { motion } from 'framer-motion';
 
-const Works = () => {
-    const [item, setItem] = useState({name: 'all'});
+const Works = ({variants}) => {
+    const [item, setItem] = useState({name: 'web'});
     const [projects, setProjects] = useState([]);
     const [active, setActive] = useState(0)
 
@@ -25,27 +27,25 @@ const Works = () => {
     
 
   return (
-    <div>
-    <div className="work__filters">
-        {projectsNav.map((item, index) => {
-            return (
+    <motion.div>
+    <motion.div variants={variants} className="work__filters">
+        {projectsNav.map((item, index) => (
                 <span onClick={(e)=> handleClick(e, index)} 
                 className={`${active === index ? 'active-work' : ''} work__item`} key={index}>
                     {item.name}
                 </span>
-            )
-        } )}
+                )
+        )}
+    </motion.div>
 
-    </div>
-
-    <div className="work__container container grid">
+    <motion.div variants={variants} className="work__container container grid">
         {projects.map((item) => {
             return <WorkItems item={item} key={item.id} />
         })}
 
 
-    </div>
-    </div>
+    </motion.div>
+    </motion.div>
   )
 }
 

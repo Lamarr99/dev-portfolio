@@ -1,7 +1,11 @@
 import './contact.css'
-import { motion, useInView } from "framer-motion"
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { container } from '../Home/Home';
+import { loadOnScroll, scrollToLeft } from '../about/About';
+import { scrollToRight } from '../Home/Social';
 
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -16,22 +20,34 @@ const Contact = () => {
   };
 
 
-  const ref = useRef(null)
-  const isInView = useInView(ref)
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
-
+  useEffect(() => {
+    if (inView) {
+      controls.start('show');
+      }
+  }, [controls, inView]);
+ 
   return (
-   <section className="contact section" id="contact" ref={ref}>
-     <span className="section__subtitle2">What's Next?</span>
-     <h2 className="section__title">Get in touch</h2>
-     <span className="section__subtitle">Have a job, proposal or want to work together on something? <br /> I'll make sure to get back to you.</span>
-
+   <motion.section 
+   className="contact section" id="contact" 
+   ref={ref}
+   variants={container}
+   initial='hidden'
+   animate={controls}
+   exit='exit'>
+    <motion.div >
+     <motion.span variants={loadOnScroll} className="section__subtitle2">What's Next?</motion.span>
+     <motion.h2 variants={loadOnScroll} className="section__title">Get in touch</motion.h2>
+     <motion.span variants={loadOnScroll} className="section__subtitle">Have a job, proposal or want to work together on something? <br /> I'll make sure to get back to you.</motion.span>
+     </motion.div>
      <div className="contact__container container grid">
         <div className="contact content">
-            <h3 className="contact__title">Talk to me</h3>
+            <motion.h3 variants={scrollToRight} className="contact__title">Talk to me</motion.h3>
 
             <div className="contact__info">
-                <div className="contact__card">
+                <motion.div variants={scrollToRight} className="contact__card">
                     <i className="bx bx-mail-send contact__card-icon"></i>
 
                     <h3 className="contact__card-title">Email</h3>
@@ -39,57 +55,57 @@ const Contact = () => {
 
                     <a href="mailto:{tonyleo2019@outlook.com}?subject={Proposal}&body={Hello Tony, this is ...}" target='_blank' 
                        className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
-                </div>
+                </motion.div>
 
-                <div className="contact__card">
+                <motion.div variants={scrollToRight} className="contact__card">
                     <i className="bx bxl-telegram contact__card-icon"></i>
 
                     <h3 className="contact__card-title">Telegram</h3>
                     <span className="contact__card-data">@TonyOsijo</span>
 
                     <a href='https://t.me/TonyOsijo' target='_blank' className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
-                </div>
+                </motion.div>
 
-                <div className="contact__card">
+                <motion.div variants={scrollToRight} className="contact__card">
                     <i className="bx bx-phone-call contact__card-icon"></i>
 
                     <h3 className="contact__card-title">Phone</h3>
                     <span className="contact__card-data">+2347062826563</span>
 
                     <a href="tel:{+2347062826563}" target='_blank' className="contact__button">Call me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
-                </div>
+                </motion.div>
 
             </div>
         </div>
 
         <div className="contact content">
-            <h3 className="contact__title">Write me your project</h3>
+            <motion.h3 variants={scrollToLeft} className="contact__title">Write me your project</motion.h3>
 
             <form ref={form} onSubmit={sendEmail} className="contact__form">
-                <div className="contact__form-div">
+                <motion.div variants={scrollToLeft} className="contact__form-div">
                     <label className="contact__form-tag">Name</label>
                     <input type="text" name='name' 
                     className='contact__form-input'
                     placeholder='Insert your name' />
-                </div>
+                </motion.div>
 
-                <div className="contact__form-div">
+                <motion.div variants={scrollToLeft} className="contact__form-div">
                     <label className="contact__form-tag">Mail</label>
                     <input type="email" name='email' 
                     className='contact__form-input'
                     placeholder='Insert your email' />
-                </div>
+                </motion.div>
 
-                <div className="contact__form-div contact__form-area">
+                <motion.div variants={scrollToLeft} className="contact__form-div contact__form-area">
                     <label className="contact__form-tag">Project</label>
                     <textarea name="project" cols="30" rows="10" 
                     className='contact__form-input'
                     placeholder='Write your project'>
 
                     </textarea>
-                </div>
+                </motion.div>
 
-                <button href="#contact" type='submit'
+                <motion.button variants={scrollToLeft} href="#contact" type='submit'
                 className="button button--flex">Send message
                     <svg
                         className="button__icon"
@@ -108,12 +124,12 @@ const Contact = () => {
                             fill="var(--hover-color)"
                         ></path>
                     </svg>
-                </button>
+                </motion.button>
 
             </form>
         </div>
      </div>
-   </section>
+   </motion.section>
   )
 }
 

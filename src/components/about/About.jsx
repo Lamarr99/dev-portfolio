@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './about.css'
-import AboutImg from '../../assets/profile.jpg';
+import AboutImg from '../../assets/about.png';
 import CV from '../../assets/01-Tony-Osijo-Cv.pdf'
 import Info from './info';
 import { useAnimation, motion } from 'framer-motion';
@@ -11,7 +11,7 @@ import { container } from '../Home/Home';
 export const loadOnScroll = {
   show: { opacity: 1, y: 0, transition: {
     ease: [.6, .01, -.05, .95],
-    duration: 3,
+    duration: 2,
   }, },
   hidden: { opacity: 0, y: 200 },
 };
@@ -20,7 +20,7 @@ export const loadOnScroll = {
 export const scrollToLeft = {
   show: { opacity: 1, x: 0, transition: {
     ease: [.6, .01, -.05, .95],
-    duration: 3,
+    duration: 2, 
   }, },
   hidden: { opacity: 0, x: 200 },
 };
@@ -34,7 +34,8 @@ const About = () => {
     if (inView) {
       controls.start('show');
       }
-  }, [controls, inView])
+  }, [controls, inView]);
+
   
   
   return (

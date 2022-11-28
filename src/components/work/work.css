@@ -21,7 +21,7 @@
 
 .work__item:hover {
     background-color: var(--bg-button);
-    color: var(--title-color);
+    color: var(--hover-color);
 }
 
 .work__container {
@@ -72,6 +72,7 @@
     justify-content: space-between;
     flex-direction: row;
     font-size: var(--smaller-font-size);
+    gap: var(--mb-0-25);
 }
 
 .work__card:hover > .work__title  {
@@ -83,13 +84,16 @@
     font-size: var(--small-font-size);
     display: flex;
     align-items: center;
-    column-gap: 0.25rem;
+    row-gap: 0.25rem;
+    font-weight: var(--font-medium) !important;
+
 }
 
 .work__button-icon {
     font-size: 1.5rem;
     transition: 0.4s;
     color: var(--title-color);
+    margin-right: var(--mb-0-5);
 }
 
 .work__button-icon:hover {
@@ -132,10 +136,7 @@
     .work__img {
         width: 100%;
     }
-    .work__card {
-        width: 60vw;
-    }
- 
+    
  
 }
 
@@ -146,9 +147,7 @@
     .work__filters {
         column-gap: 0.25rem;
     }
-    .work__card {
-        width: 80vw;
-    }
+   
  
 }
 

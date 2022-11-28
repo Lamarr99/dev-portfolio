@@ -47,7 +47,6 @@ const Home = () => {
     initial='hidden'
     animate='show'
     exit='exit'
-    // onAnimationComplete={}
 
     >
         <div className="home__container container grid">
