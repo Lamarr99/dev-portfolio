@@ -20,6 +20,7 @@
     position: relative;
     width: max-content;
     transition: all .3s;
+    max-width: 100vw;
     
 }
 .qualification__button {
@@ -97,21 +98,7 @@
     margin-bottom: var(--mb-1-5);
     display: inline-block;
 }
-.qualification__rounder {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    background-color: var(--hover-color);
-    border-radius: 50%;
-    z-index: 100;
-}
-.qualification__line {
-    display: block;
-    width: 1px;
-    height: 100%;
-    transform: translate(6px, -7px);
-    background-color: var(--text-color) ;
-}
+
 
 
 @media screen and (max-width: 992px) {
@@ -121,15 +108,15 @@
     }
  
 }
+/* 
 
-/* For medium devices */
 @media screen and (max-width: 768px) {
     .qualification__container {
         margin-left: var(--mb-1-5);
         margin-right: var(--mb-1-5);
     }
  
-}
+} */
 
 @media screen and (max-width: 576px) {
     .qualification__container {

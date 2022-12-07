@@ -9,7 +9,8 @@ import { Header,
          Testimonials,
          Contact,
          Footer, 
-         ScrollUp } from './components'
+        //  ScrollUp
+         } from './components'
 
 import { motion } from 'framer-motion'
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <motion.div>
     
-     <Header  key='Header' /> 
+      <Header /> 
       <Home />
       <About />
       <Skills />
@@ -28,10 +29,10 @@ function App() {
       <Work />
       <Testimonials />
       <Contact />
-     <Footer />
-     <ScrollUp />
+      <Footer />
+      {/* <ScrollUp /> */}
     </motion.div>
   )
 }
 
-export default App
+export default App;

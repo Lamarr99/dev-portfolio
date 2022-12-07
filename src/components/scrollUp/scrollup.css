@@ -19,7 +19,6 @@
 }
 .scrollup:hover {
     background-color: var(--bg-button);
-    /* border: 1px solid var(--hover-color); */
 }
 .show-scroll {
     bottom: 3rem;

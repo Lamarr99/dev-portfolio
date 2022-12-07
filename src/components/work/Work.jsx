@@ -1,39 +1,23 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import './work.css'
 import Works from './Works';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { container } from '../Home/Home';
-import { loadOnScroll, scrollToLeft } from '../about/About';
+import { motion } from 'framer-motion';
+import {staggerContainer,fadeIn}  from '../../utils/motion'
 
-
-const Work = () => {
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('show');
-      }
-  }, [controls, inView]);
-
-  return (
+const Work = () => (
     <motion.section 
       className="work section" 
       id='portfolio'
-      ref={ref}
-      variants={container}
-      initial='hidden'
-      animate={controls}
-      exit='exit'>
+      variants={staggerContainer}
+    initial = 'hidden'
+    whileInView='show'
+    viewport={{once: false, amount: 0.25}}>
         <motion.h2 className="section__title"
-          variants={loadOnScroll}> Some things I've Built</motion.h2>
+          variants={fadeIn('up','spring', 0.2, 1)}>Projects</motion.h2>
         
-        <Works variants={loadOnScroll} />
+        <Works variants={fadeIn('up','tween', 0.6, 1)} />
 
     </motion.section>
-  )
-}
+  );
 
 export default Work

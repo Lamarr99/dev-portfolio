@@ -1,4 +1,4 @@
-import Work1 from '../../assets/Metaversus.png'
+import Work1 from '../../assets/Metaversus.webp'
 import Work2 from '../../assets/Work2.png'
 import Work3 from '../../assets/Work3.png'
 import Work4 from '../../assets/Work4.png'
@@ -41,7 +41,7 @@ export const projectsData = [
       title: "Fierce Fitness",
       category: "web",
       builtWith:<> <p>Material UI</p><p>ExerciseDB API</p><p>React</p></>,
-      detail: 'Fitness web app with over 1300 exercises being fetched from the ExerciseDB API on RapidApi. You can search or view exercises , built with React & Material UI.',
+      detail: 'Fitness web app with over 1300 exercises being fetched from ExerciseDB API on RapidApi. You can search or view exercises , built with React & Material UI.',
       url: 'fiercefitness.netlify.app',
       code: 'https://github.com/Lamarr99/Project-Fierce_Fitness',
     },

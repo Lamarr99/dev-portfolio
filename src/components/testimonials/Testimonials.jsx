@@ -3,6 +3,7 @@ import './testimonials.css';
 import { Data } from './Data';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer } from '../../utils/motion';
 
 
 import "swiper/css";
@@ -10,11 +11,14 @@ import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
 
-const Testimonials = () => {
-  return (
-    <motion.section id='testimonials' className="testimonial container section">
-         <h2 className="section__title">My clients say</h2>
-        <span className="section__subtitle">Testimonials</span>
+const Testimonials = () =>  (
+    <motion.section id='testimonials' className="testimonial container section"
+      variants={staggerContainer}
+      initial='hidden'
+    whileInView="show"
+    viewport={{once: false, amount: 0.25}}>
+         <motion.h2 className="section__title" variants={fadeIn('down', 'tween', 0.2, 1)}>My clients say</motion.h2>
+        <motion.span className="section__subtitle" variants={fadeIn('down', 'tween', 0.3, 1)}>Testimonials</motion.span>
 
         <Swiper
         loop={true}
@@ -49,7 +53,6 @@ const Testimonials = () => {
             })}
         </Swiper>
     </motion.section>
-  )
-}
+  );
 
 export default Testimonials

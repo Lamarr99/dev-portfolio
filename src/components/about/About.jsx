@@ -1,63 +1,29 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './about.css'
-import AboutImg from '../../assets/about.png';
+import AboutImg from '../../assets/about.webp';
 import CV from '../../assets/01-Tony-Osijo-Cv.pdf'
 import Info from './info';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { container } from '../Home/Home';
+import { motion } from 'framer-motion';
+import {staggerContainer,fadeIn, slideIn}  from '../../utils/motion'
 
-
-export const loadOnScroll = {
-  show: { opacity: 1, y: 0, transition: {
-    ease: [.6, .01, -.05, .95],
-    duration: 2,
-  }, },
-  hidden: { opacity: 0, y: 200 },
-};
-
-
-export const scrollToLeft = {
-  show: { opacity: 1, x: 0, transition: {
-    ease: [.6, .01, -.05, .95],
-    duration: 2, 
-  }, },
-  hidden: { opacity: 0, x: 200 },
-};
-
-const About = () => {
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('show');
-      }
-  }, [controls, inView]);
-
-  
-  
-  return (
+const About = () =>  (
     <motion.section
-      ref={ref}
-      variants={container}
-      initial='hidden'
-      animate={controls}
-      exit='exit'
-     
+    variants={staggerContainer}
+    initial = 'hidden'
+    whileInView='show'
+    viewport={{once: false, amount: 0.25}}
     className='about section' id='about' >
-      <motion.div variants={loadOnScroll}>
-        <motion.h2  className='section__title'>About Me</motion.h2>
-      </motion.div>
+     
+        <motion.h2 variants={fadeIn('up', 'spring', 0.2, 1)} className='section__title'>About Me</motion.h2>
+      
         <div className="about__container container grid">
-            <motion.img variants={loadOnScroll} src={AboutImg} alt="" className="about__img" />
+            <motion.img variants={fadeIn('right', 'tween', 0.4, 1)} src={AboutImg} alt="" className="about__img" />
            
 
-            <motion.div variants={scrollToLeft} className="about__data">
-                <Info  />
+            <motion.div  className="about__data">
+                <Info />
 
-                <motion.p variants={loadOnScroll} className="about__description">Hello! I'm Tony and i 
+                <motion.p variants={fadeIn('up', 'tween', 0.3, 1)} className="about__description">Hello! I'm Tony and i 
                 love building things that live on the internet. 
                 My interest in web development started back in 2019 
                 when i tried making a blog site for a friend with wordpress -
@@ -66,7 +32,7 @@ const About = () => {
                    most clients have been satisfied with my work so far.
                 </motion.p>
 
-                <motion.a variants={scrollToLeft} download='' href={CV} className="button button--flex">
+                <motion.a variants={fadeIn('up', 'spring', 0.4, 1)} download='' href={CV} className="button button--flex">
                    Resume 
                     <svg
                         className="button__icon"
@@ -98,7 +64,6 @@ const About = () => {
         
 
     </motion.section >
-  )
-}
+  );
 
 export default About

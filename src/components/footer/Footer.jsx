@@ -1,8 +1,7 @@
 import React from 'react'
 import './footer.css'
 
-const Footer = () => {
-  return (
+const Footer = () =>  (
     <footer className="footer">
         <div className="footer__container container">
             {/* <h1 className="footer__title">Tony</h1> */}
@@ -28,7 +27,6 @@ const Footer = () => {
             <a href='http://github.com/Lamarr99' className="footer__copy">Designed & Built by Tony Osijo.</a>
         </div>
     </footer>
-  )
-}
+  );
 
 export default Footer

@@ -1,8 +1,9 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-const Technologies = () => {
-  return (
-    <div className="skills__content">
+
+const Technologies = ({variants}) =>  (
+    <motion.div variants={variants} className="skills__content">
         <h3 className="skills__title">Technologies</h3>
 
         <div className="skills__box">
@@ -58,8 +59,7 @@ const Technologies = () => {
             </div>
         </div>
        
-    </div>
-  )
-}
+    </motion.div>
+  );
 
 export default Technologies

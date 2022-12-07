@@ -1,8 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const ScrollDown = ({variants}) => {
-  return (
+const ScrollDown = ({variants}) => (
     <motion.div className='home__scroll' variants={variants}>
         <a href="#about" className='home__scroll-button button--flex'>
         <svg
@@ -44,7 +43,6 @@ const ScrollDown = ({variants}) => {
         <i className="uil uil-arrow-down home__scroll-arrow"></i>
         </a>
     </motion.div>
-  )
-}
+  );
 
 export default ScrollDown

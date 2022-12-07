@@ -1,5 +1,4 @@
-import React,{useState, useEffect} from 'react'
-import { loadOnScroll } from '../about/About';
+import React,{useState,useEffect} from 'react'
 import { projectsData, projectsNav } from './Data'
 import WorkItems from './WorkItems'
 import { motion } from 'framer-motion';

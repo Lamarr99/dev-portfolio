@@ -1,12 +1,13 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-const Libraries = () => {
-  return (
-    <div className="skills__content">
-    <h3 className="skills__title">Libraries</h3>
+
+const Libraries = ({variants}) => (
+    <motion.div variants={variants} className="skills__content">
+      <h3 className="skills__title">Libraries</h3>
 
     
-    <div className='skills__box'>
+      <div className='skills__box'>
             <div className="skills__group">
             <div className="skills__data">
                  <i class='bx bxl-react'></i>
@@ -66,11 +67,10 @@ const Libraries = () => {
                 
 
             </div>
-            </div>
+      </div>
 
 
-    </div>
-  )
-}
+    </motion.div>
+  );
 
 export default Libraries

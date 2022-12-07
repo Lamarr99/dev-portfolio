@@ -73,6 +73,7 @@
     .header {
         top: initial;
         bottom: 0;
+        /* max-width: 100vw !important; */
     }
     .nav {
         height: var(--header-height);

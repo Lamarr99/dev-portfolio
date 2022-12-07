@@ -1,25 +1,23 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { links, scrollToRight } from './Social';
-import { item } from './Home';
-
+import { staggerContainer, fadeIn } from '../../utils/motion'
 
 const Data = () => {
   return (
 
     <motion.div
-      variants={links}
+      variants={staggerContainer}
       initial='hidden'
-      animate='show'
-      exit='exit'
+      whileInView="show"
+      viewport={{once: false, amount: 0.25}}
       className="home__data">
-        <motion.h1 variants={item} className="home__title">Tony Osijo.</motion.h1> 
-        <motion.h3 variants={item} className="home__subtitle">Frontend Developer</motion.h3>
-        <motion.p variants={item} className="home__description">I specialize in building
+        <motion.h1 variants={fadeIn('up', 'tween', 0.2, 1)} className="home__title">Tony Osijo.</motion.h1> 
+        <motion.h3 variants={fadeIn('up', 'tween', 0.4, 1)} className="home__subtitle">Frontend Developer</motion.h3>
+        <motion.p variants={fadeIn('up', 'tween', 0.6, 1)} className="home__description">I specialize in building
             (and occasionally designing) quality digital experiences.
             Currently, I’m focused on building accessible, human-centered
             products at Braingital for a variety of clients. </motion.p>
-    <motion.a variants={item} href="#contact" className="button button--flex">Say Hello 
+    <motion.a variants={fadeIn('up', 'tween', 0.8, 1)} href="#contact" className="button button--flex">Say Hello 
             <svg
                   className="button__icon"
                   xmlns="http://www.w3.org/2000/svg"

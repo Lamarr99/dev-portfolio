@@ -1,40 +1,25 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import './skills.css'
 import Technologies from './Tech'
 import Libraries from './Libraries'
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { container } from '../Home/Home';
-import { loadOnScroll, scrollToLeft } from '../about/About';
+import {staggerContainer,fadeIn, slideIn}  from '../../utils/motion'
+import { motion } from 'framer-motion'
 
-const Skills = () => {
-
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('show');
-      }
-  }, [controls, inView]);
-
-  return (
+const Skills = () => (
    <motion.section className="skills section" id="skills"
-      ref={ref}
-      variants={container}
-      initial='hidden'
-      animate={controls}
-      exit='exit'>
-     <motion.h2 variants={loadOnScroll} className='section__title'>Skills</motion.h2>
+   variants={staggerContainer}
+   initial = 'hidden'
+   whileInView='show'
+   viewport={{once: false, amount: 0.25}}>
+     <motion.h2 variants={slideIn('up', 'spring', 0.2, 1)} className='section__title'>Skills</motion.h2>
       
 
-        <motion.div variants={scrollToLeft} className="skills__container container grid">
-            <Technologies />
-            <Libraries />
+        <motion.div  className="skills__container container grid">
+            <Technologies variants={fadeIn('right', 'tween', 0.2, 1)} />
+            <Libraries variants={fadeIn('left', 'tween', 0.2, 1)}/>
         </motion.div>
 
    </motion.section>
-  )
-}
+  );
 
 export default Skills

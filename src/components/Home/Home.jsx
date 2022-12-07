@@ -4,65 +4,31 @@ import Social from './Social';
 import Data from './Data';
 import ScrollDown from './ScrollDown';
 import { motion } from 'framer-motion';
+import { staggerContainer, fadeIn } from '../../utils/motion';
 
 
-export const container = {
-  show: {
-    transition: {
-      staggerChildren: 0.4
-    },
-  },
-};
-
-export const item = {
-  hidden: {
-    opacity: 0,
-    y: 200
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: [.6, .01, -.05, .95],
-      duration: 2,
-    },
-  },
-  exit: {
-    opacity: 0,
-    y: -200,
-    transition: {
-      ease: 'easeInOut',
-      duration: 0.8,
-    },
-  },
-};
-
-
-const Home = () => {
-  return (
+const Home = () => (
     <motion.section 
     className='home section' 
     id='home'
-    variants={container}
+    variants={staggerContainer}
     initial='hidden'
-    animate='show'
-    exit='exit'
-
+    whileInView="show"
+    viewport={{once: true, amount: 0.25}}
     >
         <div className="home__container container grid">
             <div className="home__content grid" >
                 <Social />
 
-                <motion.div className='home__img' variants={item}></motion.div>
+                <motion.div className='home__img' variants={fadeIn('left','tween', 0.5, 1)}></motion.div>
 
                  <Data />
                 
             </div>
-            <ScrollDown variants={item}/>
+            <ScrollDown variants={fadeIn('up', 'tween', 0.8, 1)}/>
         </div>
     </motion.section>
 
-  )
-}
+  );
 
 export default Home
