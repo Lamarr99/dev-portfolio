@@ -9,7 +9,7 @@ import { Header,
          Testimonials,
          Contact,
          Footer, 
-        //  ScrollUp
+         ScrollUp
          } from './components'
 
 import { motion } from 'framer-motion'
@@ -30,7 +30,7 @@ function App() {
       <Testimonials />
       <Contact />
       <Footer />
-      {/* <ScrollUp /> */}
+      <ScrollUp />
     </motion.div>
   )
 }

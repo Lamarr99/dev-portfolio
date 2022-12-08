@@ -12,7 +12,7 @@ export const projectsData = [
       category: "web",
       detail: "Metaversus brings you the Web 3.0 metaverse, you're guaranteed a smooth & memorable experience as you switch between different worlds.",
       builtWith:<> <p>Tailwind CSS</p><p>NextJs</p><p>React</p></>,
-      url: 'themetaversus.netlify.app',
+      url: 'https://themetaversus.netlify.app',
       code: 'https://github.com/Lamarr99/Project_Metaverse',
     },
     {
@@ -22,7 +22,7 @@ export const projectsData = [
       detail: 'A Youtube clone with videos fetching from Youtube v3 API on RapidApi, built with Material UI & React.',
       category: "web",
       builtWith:<> <p>Material UI</p><p>Youtube v3 API</p><p>React</p></>,
-      url: 'youtube-tony.netlify.app',
+      url: 'https://youtube-tony.netlify.app',
       code: 'https://github.com/Lamarr99/YouTube-Clone',
     },
     {
@@ -32,7 +32,7 @@ export const projectsData = [
       category: "design",
       detail: 'Remake of a bank website with modern UI/UX interface to polish my Tailwind skills, built with Tailwind CSS & React.',
       builtWith:<> <p>Tailwind CSS</p><p>React</p></>,
-      url: 'hoobbank.netlify.app',
+      url: 'https://hoobbank.netlify.app',
       code: 'https://github.com/Lamarr99/Project_Bank_webpage',
     },
     {
@@ -42,7 +42,7 @@ export const projectsData = [
       category: "web",
       builtWith:<> <p>Material UI</p><p>ExerciseDB API</p><p>React</p></>,
       detail: 'Fitness web app with over 1300 exercises being fetched from ExerciseDB API on RapidApi. You can search or view exercises , built with React & Material UI.',
-      url: 'fiercefitness.netlify.app',
+      url: 'https://fiercefitness.netlify.app',
       code: 'https://github.com/Lamarr99/Project-Fierce_Fitness',
     },
     {
@@ -52,8 +52,8 @@ export const projectsData = [
       category: "web",
       builtWith:<><p>CSS</p><p>React</p></>,
       detail: 'Single page restaurant website with a beautiful photo gallery built with React.',
+      url: 'https://larose.netlify.app',
       code: 'https://github.com/Lamarr99/Larose_Restaurant-Site',
-      url: 'larose.netlify.app',
     },
   ];
   

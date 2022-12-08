@@ -4,7 +4,7 @@ import AboutImg from '../../assets/about.webp';
 import CV from '../../assets/01-Tony-Osijo-Cv.pdf'
 import Info from './info';
 import { motion } from 'framer-motion';
-import {staggerContainer,fadeIn, slideIn}  from '../../utils/motion'
+import {staggerContainer,fadeIn}  from '../../utils/motion'
 
 const About = () =>  (
     <motion.section
@@ -14,16 +14,16 @@ const About = () =>  (
     viewport={{once: false, amount: 0.25}}
     className='about section' id='about' >
      
-        <motion.h2 variants={fadeIn('up', 'spring', 0.2, 1)} className='section__title'>About Me</motion.h2>
+        <motion.h2 variants={fadeIn('up', 'spring', 0.1, 1)} className='section__title'>About Me</motion.h2>
       
         <div className="about__container container grid">
-            <motion.img variants={fadeIn('right', 'tween', 0.4, 1)} src={AboutImg} alt="" className="about__img" />
+            <motion.img variants={fadeIn('up', 'spring', 0.3, 1)} src={AboutImg} alt="" className="about__img" />
            
 
             <motion.div  className="about__data">
                 <Info />
 
-                <motion.p variants={fadeIn('up', 'tween', 0.3, 1)} className="about__description">Hello! I'm Tony and i 
+                <motion.p variants={fadeIn('up', 'spring', 0.5, 1)} className="about__description">Hello! I'm Tony and i 
                 love building things that live on the internet. 
                 My interest in web development started back in 2019 
                 when i tried making a blog site for a friend with wordpress -
@@ -32,7 +32,7 @@ const About = () =>  (
                    most clients have been satisfied with my work so far.
                 </motion.p>
 
-                <motion.a variants={fadeIn('up', 'spring', 0.4, 1)} download='' href={CV} className="button button--flex">
+                <motion.a variants={fadeIn('up', 'spring', 0.6, 1)} download='' href={CV} className="button button--flex">
                    Resume 
                     <svg
                         className="button__icon"

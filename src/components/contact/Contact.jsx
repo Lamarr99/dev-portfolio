@@ -25,15 +25,15 @@ const Contact = () => {
     viewport={{once: false, amount: 0.25}}>
     <motion.div >
      <motion.span variants={fadeIn('up', 'spring', 0.2, 1)} className="section__subtitle2">What's Next?</motion.span>
-     <motion.h2 variants={fadeIn('up', 'tween', 0.6, 1)} className="section__title">Get in touch</motion.h2>
-     <motion.span variants={fadeIn('up', 'tween', 0.7, 1)} className="section__subtitle">Have a job, proposal or want to work together on something? <br /> I'll make sure to get back to you.</motion.span>
+     <motion.h2 variants={fadeIn('up', 'tween', 0.4, 1)} className="section__title">Get in touch</motion.h2>
+     <motion.span variants={fadeIn('up', 'tween', 0.6, 1)} className="section__subtitle">Have a job, proposal or want to work together on something? <br /> I'll make sure to get back to you.</motion.span>
      </motion.div>
      <div className="contact__container container grid">
         <div className="contact content">
-            <motion.h3 variants={fadeIn('right', 'tween', 0.1, 1)} className="contact__title">Talk to me</motion.h3>
+            <motion.h3 variants={fadeIn('up', 'tween', 0.1, 1)} className="contact__title">Talk to me</motion.h3>
 
             <div className="contact__info">
-                <motion.div variants={fadeIn('right', 'spring', 0.2, 1)} className="contact__card">
+                <motion.div variants={fadeIn('up', 'spring', 0.2, 1)} className="contact__card">
                     <i className="bx bx-mail-send contact__card-icon"></i>
 
                     <h3 className="contact__card-title">Email</h3>
@@ -43,7 +43,7 @@ const Contact = () => {
                        className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                 </motion.div>
 
-                <motion.div variants={fadeIn('right', 'spring', 0.4, 1)} className="contact__card">
+                <motion.div variants={fadeIn('up', 'spring', 0.4, 1)} className="contact__card">
                     <i className="bx bxl-telegram contact__card-icon"></i>
 
                     <h3 className="contact__card-title">Telegram</h3>
@@ -52,7 +52,7 @@ const Contact = () => {
                     <a href='https://t.me/TonyOsijo' target='_blank' className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                 </motion.div>
 
-                <motion.div variants={fadeIn('right', 'spring', 0.6, 1)} className="contact__card">
+                <motion.div variants={fadeIn('up', 'spring', 0.6, 1)} className="contact__card">
                     <i className="bx bx-phone-call contact__card-icon"></i>
 
                     <h3 className="contact__card-title">Phone</h3>
@@ -65,24 +65,24 @@ const Contact = () => {
         </div>
 
         <div className="contact content">
-            <motion.h3 variants={fadeIn('left', 'tween', 0.1, 1)} className="contact__title">Write me your project</motion.h3>
+            <motion.h3 variants={fadeIn('up', 'tween', 0.1, 1)} className="contact__title">Write me your project</motion.h3>
 
             <form ref={form} onSubmit={sendEmail} className="contact__form">
-                <motion.div variants={fadeIn('left', 'spring', 0.2, 1)} className="contact__form-div">
+                <motion.div variants={fadeIn('up', 'spring', 0.2, 1)} className="contact__form-div">
                     <label className="contact__form-tag">Name</label>
                     <input type="text" name='name' 
                     className='contact__form-input'
                     placeholder='Insert your name' />
                 </motion.div>
 
-                <motion.div variants={fadeIn('left', 'spring', 0.4, 1)} className="contact__form-div">
+                <motion.div variants={fadeIn('up', 'spring', 0.4, 1)} className="contact__form-div">
                     <label className="contact__form-tag">Mail</label>
                     <input type="email" name='email' 
                     className='contact__form-input'
                     placeholder='Insert your email' />
                 </motion.div>
 
-                <motion.div variants={fadeIn('left', 'spring', 0.6, 1)} className="contact__form-div contact__form-area">
+                <motion.div variants={fadeIn('up', 'spring', 0.6, 1)} className="contact__form-div contact__form-area">
                     <label className="contact__form-tag">Project</label>
                     <textarea name="project" cols="30" rows="10" 
                     className='contact__form-input'
@@ -91,7 +91,7 @@ const Contact = () => {
                     </textarea>
                 </motion.div>
 
-                <motion.button variants={fadeIn('left', 'spring', 0.8, 1)} href="#contact" type='submit'
+                <motion.button variants={fadeIn('up', 'spring', 0.6, 1)} href="#contact" type='submit'
                 className="button button--flex">Send message
                     <svg
                         className="button__icon"

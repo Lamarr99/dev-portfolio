@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.css'
 
 const Footer = () =>  (
-    <footer className="footer">
+    <footer id='footer' className="footer">
         <div className="footer__container container">
             {/* <h1 className="footer__title">Tony</h1> */}
 
@@ -24,7 +24,7 @@ const Footer = () =>  (
             <a href="" className="footer__social-link" target='_blank' rel='noreferrer' ><i class="bx bxl-whatsapp"></i></a>
     
             </div> */}
-            <a href='http://github.com/Lamarr99' className="footer__copy">Designed & Built by Tony Osijo.</a>
+            <a href='https://github.com/Lamarr99' target='_blank' className="footer__copy">Designed & Built by Tony Osijo.</a>
         </div>
     </footer>
   );

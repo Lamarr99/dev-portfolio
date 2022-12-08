@@ -6,8 +6,6 @@
     max-width: 768px;
     display: flex;
     flex-direction: row;
-    
-   
 }
 
 .qualification__tabs {
@@ -27,7 +25,7 @@
     font-size: var(--small-font-size);
     font-weight: var(--font-normal);
     color: var(--title-color-dark);
-    padding: var(--mb-1) var(--mb-0-5);
+    padding: var(--mb-1) var(--mb-1-5);
     cursor: pointer;
     transition: all .3s;
     width: 100%;;
@@ -130,6 +128,8 @@
        flex-direction: row;
        height: min-content;
        white-space: nowrap;
+       justify-content: center;
+       align-items: center;
         
     }
     .qualification__active {
@@ -142,7 +142,7 @@
        
         border-left: none;
         border-bottom: 2px solid var(--text-color);
-        padding: var(--mb-0-75) var(--mb-0-75);
+        padding: var(--mb-0-75) var(--mb-1-5);
         text-align: center;
 
     }

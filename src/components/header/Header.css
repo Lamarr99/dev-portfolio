@@ -86,7 +86,6 @@
         width: 100%;
         background-color: var(--body-color);
         padding: 2rem 1.5rem 4rem;
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;
     }
@@ -99,7 +98,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
-         /* column-gap: 2rem;  */
     }
 
 

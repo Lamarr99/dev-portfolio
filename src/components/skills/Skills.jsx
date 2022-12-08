@@ -15,8 +15,8 @@ const Skills = () => (
       
 
         <motion.div  className="skills__container container grid">
-            <Technologies variants={fadeIn('right', 'tween', 0.2, 1)} />
-            <Libraries variants={fadeIn('left', 'tween', 0.2, 1)}/>
+            <Technologies variants={fadeIn('up', 'tween', 0.4, 1)} />
+            <Libraries variants={fadeIn('up', 'tween', 0.6, 1)}/>
         </motion.div>
 
    </motion.section>
