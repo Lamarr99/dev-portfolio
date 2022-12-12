@@ -17,8 +17,8 @@ const Testimonials = () =>  (
       initial='hidden'
     whileInView="show"
     viewport={{once: false, amount: 0.25}}>
-         <motion.h2 className="section__title" variants={fadeIn('down', 'tween', 0.2, 1)}>My clients say</motion.h2>
-        <motion.span className="section__subtitle" variants={fadeIn('down', 'tween', 0.3, 1)}>Testimonials</motion.span>
+         <motion.h2 className="section__title" variants={fadeIn('up', 'tween', 0.2, 1)}>My clients say</motion.h2>
+        <motion.span className="section__subtitle" variants={fadeIn('up', 'tween', 0.4, 1)}>Testimonials</motion.span>
 
         <Swiper
         loop={true}
