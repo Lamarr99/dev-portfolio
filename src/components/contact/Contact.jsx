@@ -4,6 +4,7 @@ import {staggerContainer,fadeIn, zoomIn, slideIn}  from '../../utils/motion'
 
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { TitleText, TypingText } from '../CustomTexts';
 
 const Contact = () => {
 
@@ -24,12 +25,13 @@ const Contact = () => {
     whileInView='show'
     viewport={{once: false, amount: 0.25}}>
     <motion.div >
-     <motion.span variants={fadeIn('up', 'spring', 0.2, 1)} className="section__subtitle2">What's Next?</motion.span>
-     <motion.h2 variants={fadeIn('up', 'tween', 0.4, 1)} className="section__title">Get in touch</motion.h2>
-     <motion.span variants={fadeIn('up', 'tween', 0.6, 1)} className="section__subtitle">Have a job, proposal or want to work together on something? <br /> I'll make sure to get back to you.</motion.span>
-     </motion.div>
+        <TypingText title="What's Next?"  className="section__subtitle2" />
+        <TitleText title="Get in touch" />
+         <motion.span variants={fadeIn('up', 'tween', 0.6, 1)} className="section__subtitle">Have a job, proposal or want to work together on something? <br /> I'll make sure to get back to you.</motion.span>
+    </motion.div>
      <div className="contact__container container grid">
         <div className="contact content">
+
             <motion.h3 variants={fadeIn('up', 'tween', 0.1, 1)} className="contact__title">Talk to me</motion.h3>
 
             <div className="contact__info">

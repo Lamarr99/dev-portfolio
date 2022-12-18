@@ -8,6 +8,7 @@ import Testimonials from "./testimonials/Testimonials";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
 import ScrollUp from "./scrollUp/ScrollUp";
+import { TypingText, TitleText } from "./CustomTexts";
 
 
 export {
@@ -21,4 +22,6 @@ export {
     Contact,
     Footer,
     ScrollUp,
+    TypingText,
+    TitleText,
 };

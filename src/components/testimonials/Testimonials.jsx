@@ -4,7 +4,7 @@ import { Data } from './Data';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '../../utils/motion';
-
+import { TypingText, TitleText } from '../CustomTexts';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,8 +17,8 @@ const Testimonials = () =>  (
       initial='hidden'
     whileInView="show"
     viewport={{once: false, amount: 0.25}}>
-         <motion.h2 className="section__title" variants={fadeIn('up', 'tween', 0.2, 1)}>My clients say</motion.h2>
-        <motion.span className="section__subtitle" variants={fadeIn('up', 'tween', 0.4, 1)}>Testimonials</motion.span>
+      <TitleText title="My clients say" />
+      <TypingText title="Testimonials" />
 
         <Swiper
         loop={true}

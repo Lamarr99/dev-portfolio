@@ -13,8 +13,6 @@
   --container-color: #112240;
   --hover-color: #64ffda;
   --bg-button: rgba(100, 255, 218, 0.1);
-  
-  
 
 
   /*========== Font and typography ==========*/
@@ -145,7 +143,7 @@ img {
   font-size: var(--normal-font-size);
   margin-bottom: .5rem;
   font-weight: var(--font-normal);
-  color: var(--hover-color);
+  color: var(--hover-color) !important;
   letter-spacing: .05rem;
   word-spacing: .2rem;
   justify-content: center;
