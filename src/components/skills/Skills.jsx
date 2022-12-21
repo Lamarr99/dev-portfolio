@@ -4,6 +4,7 @@ import Technologies from './Tech'
 import Libraries from './Libraries'
 import {staggerContainer,fadeIn, slideIn}  from '../../utils/motion'
 import { motion } from 'framer-motion'
+import { TitleText } from '../CustomTexts'
 
 const Skills = () => (
    <motion.section className="skills section" id="skills"
@@ -11,8 +12,7 @@ const Skills = () => (
    initial = 'hidden'
    whileInView='show'
    viewport={{once: false, amount: 0.25}}>
-     <motion.h2 variants={slideIn('up', 'spring', 0.2, 1)} className='section__title'>Skills</motion.h2>
-      
+    <TitleText title='Stack' />      
 
         <motion.div  className="skills__container container grid">
             <Technologies variants={fadeIn('up', 'tween', 0.4, 1)} />

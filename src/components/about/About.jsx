@@ -5,6 +5,7 @@ import CV from '../../assets/01-Tony-Osijo-Cv.pdf'
 import Info from './info';
 import { motion } from 'framer-motion';
 import {staggerContainer,fadeIn}  from '../../utils/motion'
+import { TitleText } from '../CustomTexts';
 
 const About = () =>  (
     <motion.section
@@ -13,8 +14,7 @@ const About = () =>  (
     whileInView='show'
     viewport={{once: false, amount: 0.25}}
     className='about section' id='about' >
-     
-        <motion.h2 variants={fadeIn('up', 'spring', 0.1, 1)} className='section__title'>About Me</motion.h2>
+        <TitleText title='About Me' />
       
         <div className="about__container container grid">
             <motion.img variants={fadeIn('up', 'spring', 0.3, 1)} src={AboutImg} alt="Tony Osijo" className="about__img" />
@@ -24,7 +24,7 @@ const About = () =>  (
                 <Info />
 
                 <motion.p variants={fadeIn('up', 'spring', 0.5, 1)} className="about__description">Hello! I'm Tony and i 
-                love building things that live on the internet. 
+                love building things for the internet. 
                 My interest in web development started back in 2019 
                 when i tried making a blog site for a friend with wordpress -
                  totally enjoyed the process and now I create pixel-perfect web pages with

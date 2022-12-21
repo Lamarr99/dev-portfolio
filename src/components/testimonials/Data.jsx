@@ -32,7 +32,7 @@ export const Data = [
   //     id: 4,
   //     image: Image2,
   //     title: "Kayode Dawodu",
-  //     position: 'Software Engineer',
+  //     position: 'Cloud Engineer',
   //     description: 
   //     "He's reliable, professional and easy to work with. I can't recommend him highly enough and we look forward to continuing our working relationship."
   // },

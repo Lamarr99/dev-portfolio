@@ -23,5 +23,6 @@ export const TitleText = ({title}) => (
     whileInView='show'
     className='section__title'
     >
-      {title}</motion.h2>
+    {title}
+    </motion.h2>
 );

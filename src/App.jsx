@@ -3,13 +3,13 @@ import './App.css'
 import { Header, 
          Home, 
          About,
-         Skills,
-         Qualifications, 
-         Work, 
+         Skills, 
+         Projects, 
          Testimonials,
          Contact,
          Footer, 
-         ScrollUp
+         ScrollUp,
+         Experience
          } from './components'
 
 import { motion } from 'framer-motion'
@@ -25,8 +25,8 @@ function App() {
       <Home />
       <About />
       <Skills />
-      <Qualifications />
-      <Work />
+      <Experience />
+      <Projects />
       <Testimonials />
       <Contact />
       <Footer />

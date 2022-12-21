@@ -3,7 +3,7 @@ import './testimonials.css';
 import { Data } from './Data';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from 'framer-motion';
-import { fadeIn, staggerContainer } from '../../utils/motion';
+import { staggerContainer } from '../../utils/motion';
 import { TypingText, TitleText } from '../CustomTexts';
 
 import "swiper/css";
@@ -40,17 +40,15 @@ const Testimonials = () =>  (
         }}
         modules={[Pagination]}
         className="mySwiper testimonial__container">
-            {Data.map(({id, image, title, description, position}) => {
-                return (
+            {Data.map(({id, image, title, description, position}) => (
                     <SwiperSlide className='testimonial__card' key={id}>
                         <img src={image} alt="" className='testimonial__img' />
                         <h3 className="testimonial__name">{title}</h3>
                         <span className='testimonial__title'>{position}</span>
                         <p className="testimonial__description">{description}</p>
-
                     </SwiperSlide>
                 )
-            })}
+            )}
         </Swiper>
     </motion.section>
   );

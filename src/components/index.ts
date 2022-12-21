@@ -2,8 +2,8 @@ import Header from "./header/Header";
 import Home from "./Home/Home";
 import About from "./about/About";
 import Skills from "./skills/Skills";
-import Qualifications from "./qualifications/Qualifications";
-import Work from "./work/Work";
+import Experience from "./Experience/Experience";
+import Projects from "./Projects/Projects";
 import Testimonials from "./testimonials/Testimonials";
 import Contact from "./contact/Contact";
 import Footer from "./footer/Footer";
@@ -16,8 +16,8 @@ export {
     Home,
     About,
     Skills,
-    Qualifications,
-    Work,
+    Experience,
+    Projects,
     Testimonials,
     Contact,
     Footer,

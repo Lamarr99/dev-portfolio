@@ -35,6 +35,14 @@ const Libraries = ({variants}) => (
                    
                  </div>
                 </div>
+                <div className="skills__data">
+                 <i class='bx bx-badge-check'></i>
+
+                 <div>
+                    <h3 className="skills__name">Framer Motion</h3>
+                   
+                 </div>
+                </div>
 
                 <div className="skills__data">
                  <i class='bx bxl-bootstrap'></i>

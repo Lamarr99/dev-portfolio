@@ -26,6 +26,13 @@ const Technologies = ({variants}) =>  (
                     <h3 className="skills__name">CSS</h3>
                  </div>
                 </div>
+                <div className="skills__data">
+                 <i class='bx bxl-css3'></i>
+
+                 <div>
+                    <h3 className="skills__name">Typescript</h3>
+                 </div>
+                </div>
 
                 <div className="skills__data">
                  <i class='bx bxl-git'></i>

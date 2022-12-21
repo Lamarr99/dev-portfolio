@@ -1,6 +1,6 @@
 import './contact.css'
 import { motion } from 'framer-motion';
-import {staggerContainer,fadeIn, zoomIn, slideIn}  from '../../utils/motion'
+import {staggerContainer,fadeIn}  from '../../utils/motion'
 
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -10,11 +10,11 @@ const Contact = () => {
 
     const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+    const sendEmail = (e) => {
+     e.preventDefault();
 
-    emailjs.sendForm('service_uf90mv4', 'template_whpfy8s', form.current, 'btYTpJEuY06bZnWTR')
-      e.target.reset()
+     emailjs.sendForm('service_uf90mv4', 'template_whpfy8s', form.current, 'btYTpJEuY06bZnWTR')
+     e.target.reset()
   };
  
   return (
