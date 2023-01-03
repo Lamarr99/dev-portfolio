@@ -20,7 +20,6 @@ function App() {
 
   return (
     <motion.div>
-    
       <Header /> 
       <Home />
       <About />

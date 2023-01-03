@@ -50,7 +50,7 @@ const Header = () => {
                         className="nav__item"
                         variants={fadeIn('down', 'tween', 0.2, 1)}
                      >
-                        <a className={activeNav === '#home' ? 'nav__link active-link' : 'nav__link hvr-underline-from-left'} href="#home" 
+                        <a className={activeNav === '#home' ? 'nav__link active-link' : 'nav__link'} href="#home" 
                         onClick={() => setActiveNav('#home')} >
                             <i className="uil uil-estate nav__icon"></i>Home
                         </a>

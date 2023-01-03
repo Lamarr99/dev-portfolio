@@ -42,18 +42,6 @@
     transition: .3s;
 }
 
-.nav__link::after {
-    content:  '';
-    display: block;
-    width: 0;
-    height: .1rem;
-    background-color: var(--hover-color);
-    transition:  width .3s;
-}
-.nav__link:hover::after {
-    width: 75%;
-}
-
 .nav__close,
 .nav__toggle ,
 .nav__icon {
@@ -76,7 +64,7 @@
     0% {
         transform: translateX(0);
     }
-    30% {
+    50% {
         transform: translateX(3.75rem);
     }
 }
