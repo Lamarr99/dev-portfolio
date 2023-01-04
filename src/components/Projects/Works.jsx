@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { projectsData, projectsNav } from './Data'
 import WorkItems from './WorkItems'
 import { motion } from 'framer-motion';
+import { navVariants, footerVariants } from '../../utils/motion';
 
 const Works = ({variants}) => {
     const [item, setItem] = useState({name: 'web'});
@@ -27,7 +28,7 @@ const Works = ({variants}) => {
 
   return (
     <motion.div>
-    <motion.div variants={variants} className="work__filters">
+    <motion.div variants={navVariants} className="work__filters">
         {projectsNav.map((item, index) => (
                 <span onClick={(e)=> handleClick(e, index)} 
                 className={`${active === index ? 'active-work' : ''} work__item`} key={index}>
@@ -37,7 +38,7 @@ const Works = ({variants}) => {
         )}
     </motion.div>
 
-    <motion.div variants={variants} className="work__container container grid">
+    <motion.div variants={footerVariants} className="work__container container grid">
         {projects.map((item) => {
             return <WorkItems item={item} key={item.id} />
         })}
