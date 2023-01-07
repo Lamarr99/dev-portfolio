@@ -17,7 +17,7 @@ const About = () =>  (
         <TitleText title='About Me' />
       
         <div className="about__container container grid">
-            <motion.img variants={fadeIn('up', 'spring', 0.3, 1)} src={AboutImg} alt="Tony Osijo" className="about__img" />
+            <motion.img variants={fadeIn('up', 'spring', 0.3, 1)} src={AboutImg} alt="Tony Osijo Frontend Developer" className="about__img" />
            
 
             <motion.div  className="about__data">
