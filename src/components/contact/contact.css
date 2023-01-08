@@ -107,7 +107,7 @@
  
 }
 
-/* For medium devices */
+
 @media screen and (max-width: 768px) {
     .contact__container {
         grid-template-columns: 1fr;
@@ -131,7 +131,3 @@
     }
 }
 
-/* For small devices */
-@media screen and (max-width: 350px) {
-
-}
