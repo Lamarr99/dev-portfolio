@@ -1,6 +1,6 @@
 .footer {
     background-color: var(--body-color);
-    border-top: 1px solid var(--bg-button);
+    /* border-top: 1px solid var(--bg-button); */
     /* rgba(0, 0, 0, 0.1); */
 }
 

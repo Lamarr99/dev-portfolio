@@ -31,7 +31,7 @@ const Qualifications = () => {
                  'experience__button button__flex'} onClick={()=> ToggleTab(3)}>Flashpoint Studios</div>
             </motion.div>
 
-                <motion.div variants={fadeIn('up', 'spring', 0.4, 1)} className={toggleState == 1 ? 'experience__content experience__content-active' : 'experience__content'}>            
+                <motion.div variants={fadeIn('up', 'spring', 0.3, 1)} className={toggleState == 1 ? 'experience__content experience__content-active' : 'experience__content'}>            
                         <h3 className='experience__title'>Frontend Developer Intern @ <span className='company'>Braingital</span> </h3>
                         <small className='experience__timeline'>June 2022 - Present</small>
                         <motion.div variants={fadeIn('up', 'spring', 0.6, 1)} className='experience__details'>

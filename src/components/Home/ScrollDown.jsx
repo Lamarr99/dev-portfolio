@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const ScrollDown = ({variants}) => (
     <motion.div className='home__scroll' variants={variants}>
-        <a href="#textMe" className='home__scroll-button button--flex'>
+        <a href="#reachOut" className='home__scroll-button button--flex'>
         <svg
                 width="32px"
                 height="32px"
