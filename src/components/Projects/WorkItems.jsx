@@ -1,9 +1,16 @@
 import React from 'react'
+import { motion } from 'framer-motion';
+import { textVariant2 } from '../../utils/motion';
 
 const WorkItems = ({item}) => (
-    <div className="work__card" key={item.id}>
+    <motion.div 
+      className="work__card" 
+      key={item.id}
+      variants={textVariant2}
+      initial='hidden'
+      whileInView='show'>
       <a href={item.url} target='_blank' rel='noreferrer'>
-        <img src={item.image} alt="Anthony 'Tony' Osijo -Frontend developer project" className='work__img' loading='lazy' />
+        <img src={item.image} alt="Tony Osijo Frontend project" className='work__img' loading='lazy' />
       </a>
       <h3 className="work__title">{item.title}</h3>
       <p className='work__detail'>{item.detail}</p>
@@ -15,8 +22,7 @@ const WorkItems = ({item}) => (
         {item.builtWith}
       </div>
 
-
-    </div>
+    </motion.div>
   );
 
 export default WorkItems
