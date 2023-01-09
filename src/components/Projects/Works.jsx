@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { projectsData, projectsNav } from './Data'
-import WorkItems from './WorkItems'
+import ProjectItems from './ProjectItems'
 import { motion } from 'framer-motion';
 import { navVariants, footerVariants } from '../../utils/motion';
 
@@ -40,7 +40,7 @@ const Works = ({variants}) => {
 
     <motion.div variants={footerVariants} className="work__container container grid">
         {projects.map((item) => {
-            return <WorkItems item={item} key={item.id} />
+            return <ProjectItems item={item} key={item.id} />
         })}
 
 

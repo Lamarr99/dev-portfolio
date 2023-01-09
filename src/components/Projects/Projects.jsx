@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import {staggerContainer,fadeIn}  from '../../utils/motion'
 import { TitleText } from '../CustomTexts';
 
-const Work = () => (
+const Projects = () => (
     <motion.section 
       className="work section" 
       id='portfolio'
@@ -20,4 +20,4 @@ const Work = () => (
     </motion.section>
   );
 
-export default Work
+export default Projects
