@@ -3,16 +3,11 @@ import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '../../utils/motion';
 
 const ProjectItems = ({item}) => (
-    <motion.div 
       
-      variants={staggerContainer}
-      initial = 'hidden'
-      whileInView='show'
-      viewport={{once: false, amount: 0.25}}>
         <motion.div 
-        variants={fadeIn('up', 'tween', 0.2, 1)} 
-        className="work__card" 
-        key={item.id}>
+          variants={fadeIn('up', 'tween', 0.2, 1)} 
+          className="work__card" 
+          key={item.id}>
       <a href={item.url} target='_blank' rel='noreferrer'>
         <img src={item.image} alt="Tony Osijo Frontend project" className='work__img' loading='lazy' />
       </a>
@@ -30,7 +25,6 @@ const ProjectItems = ({item}) => (
       </div>
       </motion.div>
 
-    </motion.div>
   );
 
 export default ProjectItems

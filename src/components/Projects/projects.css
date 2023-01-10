@@ -52,7 +52,6 @@
 .work__img {
     width: 100%;
     border-radius: .35rem;
-    /* margin-bottom: var(--mb-1); */
 }
 
 .work__title {
@@ -66,7 +65,7 @@
     max-width: 90%;
     font-size: var(--small-font-size);
     font-weight: var(--font-normal);
-    height: max-content;
+    height: max-content ;
 }
 .work__flex {
     display: flex;
