@@ -54,7 +54,8 @@ const Contact = () => {
                     <h3 className="contact__card-title">Telegram</h3>
                     <span className="contact__card-data">@TonyOsijo</span>
 
-                    <a href='https://t.me/TonyOsijo' target='_blank' className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    <a 
+                      href='https://t.me/TonyOsijo' target='_blank' className="contact__button">Write me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                 </motion.div>
 
                 <motion.div variants={fadeIn('up', 'spring', 0.6, 1)} className="contact__card">
