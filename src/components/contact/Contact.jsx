@@ -64,7 +64,7 @@ const Contact = () => {
                     <h3 className="contact__card-title">Phone</h3>
                     <span className="contact__card-data">+2347062826563</span>
 
-                    <a href="tel:{+2347062826563}" target='_blank' className="contact__button">Call me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
+                    <a href="tel:{+2347062826563}" target='_blank'  className="contact__button">Call me <i className="bx bx-right-arrow-alt contact__button-icon"></i></a>
                 </motion.div>
 
             </div>
