@@ -23,13 +23,7 @@ const About = () =>  (
             <motion.div  className="about__data">
                 <Info />
 
-                <motion.p variants={fadeIn('up', 'spring', 0.5, 1)} className="about__description">Hello! I'm Tony and i 
-                love building things for the internet. 
-                My interest in web development started back in 2019 
-                when i tried making a blog site for a friend with wordpress -
-                 totally enjoyed the process and now I create pixel-perfect web pages with
-                  UI / UX user interface, I have more than a year's experience and
-                   most clients have been satisfied with my work so far.
+                <motion.p variants={fadeIn('up', 'spring', 0.5, 1)} className="about__description">Hi there! I'm Tony, a web developer who's passionate about creating online experiences. My journey started in 2019 when I built a WordPress blog site for a friend. Since then, I've honed my skills and have been creating pixel-perfect web pages with an emphasis on sleek UI/UX design. With over a year's worth of experience, I take pride in consistently satisfying my clients.
                 </motion.p>
 
                 <motion.a variants={fadeIn('up', 'spring', 0.6, 1)} download='' href={CV} className="button button--flex">
